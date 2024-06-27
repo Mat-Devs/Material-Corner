@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials-Corner</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            max-width: 500px;
+            margin: auto;
+        }
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 500px) {
+            .navbar-nav {
+                text-align: center;
+                color:black;
+            }
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+            }
+            .hero-text {
+                padding: 10px;
+            }
+        }
+        /* Media Queries for Laptop Devices */
+        @media (min-width: 1024px) {
+            body {
+                max-width: none;
+                margin: 0;
+            }
+            .navbar {
+                background-color: #343a40;
+                color:black;
+            }
+            .navbar-brand, .navbar-nav .nav-link {
+                color: #000000 !important;
+            }
+            .hero-text {
+                padding: 50px;
+            }
+            .card {
+                flex-direction: row;
+            }
+            .card img {
+                width: 50%;
+            }
+            .card-body {
+                padding: 30px;
+            }
+            #contact .container {
+                max-width: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MatSci Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto bg-black">
+            <li class="nav-item active ">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="text-center bg-primary text-white py-5">
+    <div class="container hero-text">
+        <h1>Welcome to the Materials Science Blog</h1>
+        <p>Discover the latest in Materials Science and Engineering</p>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Latest Posts</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-3">
+                    <img src="blog-image.jpg" class="card-img-top" alt="Blog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Blog Post Title</h5>
+                        <p class="card-text">A brief description of the blog post content.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for more blog posts -->
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+    <div class="container col-10 text-center">
+        <h2 class="text-center">About Us</h2>
+        <p>We are dedicated to bringing you the latest updates and insights in the field of Materials Science and Engineering. Our blog covers a wide range of topics including recent research, technological advancements, and industry news.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" style="resize:none;" id="message" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p>&copy; 2024 MatSci | All Rights Reserved</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
