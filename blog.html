@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatSci Blog - Write a Blog</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .hero-section {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            color: white;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+        }
+        .hero-section .btn {
+            margin-top: 20px;
+        }
+        .categories, .newsletter {
+            margin: 30px 0;
+        }
+        .newsletter input {
+            max-width: 400px;
+            margin: auto;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+        }
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 500px) {
+            .navbar-brand, .navbar-nav .nav-link {
+                font-size: 1rem;
+            }
+            .form-group label {
+                font-size: 1.2rem;
+            }
+            .form-control {
+                font-size: 1rem;
+            }
+            .btn-primary {
+                width: 100%;
+            }
+            .blog-list h3 {
+                font-size: 1.2rem;
+            }
+            .blog-list p {
+                font-size: 1rem;
+            }
+        }
+        /* Media Queries for Tablet Devices */
+        @media (min-width: 600px) and (max-width: 800px) {
+            body {
+                max-width: 90%;
+                margin: auto;
+                padding: 30px;
+            }
+            .navbar-brand, .navbar-nav .nav-link {
+                font-size: 1.2rem;
+            }
+            .form-group label {
+                font-size: 1.5rem;
+            }
+            .form-control {
+                font-size: 1.2rem;
+            }
+            .btn-primary {
+                width: auto;
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+            .blog-list h3 {
+                font-size: 1.5rem;
+            }
+            .blog-list p {
+                font-size: 1.2rem;
+            }
+        }
+        /* Media Queries for Laptop Devices */
+        @media (min-width: 801px) {
+            body {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .navbar-brand, .navbar-nav .nav-link {
+                font-size: 1.1rem;
+            }
+            .form-group label {
+                font-size: 1.2rem;
+            }
+            .form-control {
+                font-size: 1.1rem;
+            }
+            .btn-primary {
+                width: auto;
+                font-size: 1.0rem;
+                padding: 5px 10px;
+            }
+            .blog-list h3 {
+                font-size: 1.2rem;
+            }
+            .blog-list p {
+                font-size: 1.0rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MatSci Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#write">Write</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#blogs">Blogs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1>Welcome to MatSci Blog</h1>
+        <p>Your one-stop destination for all things Materials Science</p>
+        <a href="#write" class="btn btn-primary">Write a Blog</a>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories py-5">
+    <div class="container">
+        <h2 class="text-center">Categories</h2>
+        <div class="row">
+            <div class="col-md-3"><a href="#" class="btn btn-outline-secondary btn-block">Polymers</a></div>
+            <div class="col-md-3"><a href="#" class="btn btn-outline-secondary btn-block">Metals</a></div>
+            <div class="col-md-3"><a href="#" class="btn btn-outline-secondary btn-block">Ceramics</a></div>
+            <div class="col-md-3"><a href="#" class="btn btn-outline-secondary btn-block">Composites</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Writing Form -->
+<section id="write" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Write a New Blog Post</h2>
+        <form>
+            <div class="form-group">
+                <label for="title">Blog Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter your blog title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control" id="content" rows="10" placeholder="Write your blog content here" style="resize: none;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="author">Author Name</label>
+                <input type="text" class="form-control" id="author" placeholder="Enter your name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Blog List Section -->
+<section id="blogs" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">Other Blog Posts</h2>
+        <div class="blog-list">
+            <div class="mb-3">
+                <h3>Blog Post Title 1</h3>
+                <p>A brief description of the blog post content.</p>
+                <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+            <div class="mb-3">
+                <h3>Blog Post Title 2</h3>
+                <p>A brief description of the blog post content.</p>
+                <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+            <!-- Repeat similar blocks for more blog posts -->
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter py-5 text-center">
+    <div class="container">
+        <h2>Subscribe to our Newsletter</h2>
+        <form class="form-inline justify-content-center">
+            <input type="email" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Enter your email">
+            <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p>&copy; 2024 Materials Science Blog. All Rights Reserved.</p>
+        <p>Follow us on:
+            <a href="#" class="text-white">Facebook</a> |
+            <a href="#" class="text-white">Twitter</a> |
+            <a href="#" class="text-white">LinkedIn</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
